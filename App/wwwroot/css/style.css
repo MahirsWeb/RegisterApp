@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
     margin: 0;
@@ -28,18 +28,18 @@ body {
     border: 2px solid rgba(200, 200, 200, 0.624);
 }
 
-    .wrapper h1 {
-        text-align: center;
-        font-weight: 800;
-        color: #ebebeb;
-    }
+.wrapper h1 {
+    text-align: center;
+    font-weight: 800;
+    color: #ebebeb;
+}
 
-    .wrapper .input-box {
-        position: relative;
-        width: 100%;
-        height: 50px;
-        margin: 30px 0;
-    }
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
 
 .input-box input {
     width: 100%;
@@ -55,9 +55,9 @@ body {
     color: #ffffff;
 }
 
-    .input-box input::placeholder {
-        color: #ebebeb;
-    }
+.input-box input::placeholder {
+    color: #ebebeb;
+}
 
 .input-box i {
     color: #ebebeb;
@@ -68,6 +68,14 @@ body {
     font-size: 20px;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 .names {
     display: inline-flex;
     width: 100%;
@@ -75,20 +83,20 @@ body {
     justify-content: space-between;
 }
 
-    .names #horizontal-names {
-        width: 45%;
-        margin-bottom: 0;
-    }
+.names #horizontal-names {
+    width: 45%;
+    margin-bottom: 0;
+}
 
 .agree-terms {
     font-weight: 600;
     color: #0e4d37;
 }
 
-    .agree-terms label input {
-        accent-color: #0e4d37;
-        margin-right: 5px;
-    }
+.agree-terms label input {
+    accent-color: #0e4d37;
+    margin-right: 5px;
+}
 
 .press {
     width: 100%;
@@ -113,15 +121,15 @@ body {
     color: white;
 }
 
-    .login-acc p a {
-        font-weight: 700;
-        color: #0e4d37;
-        text-decoration: none;
-    }
+.login-acc p a {
+    font-weight: 700;
+    color: #0e4d37;
+    text-decoration: none;
+}
 
-        .login-acc p a:hover {
-            text-decoration: underline;
-        }
+.login-acc p a:hover {
+    text-decoration: underline;
+}
 
 .forgotpass p a {
     font-weight: 700;
@@ -132,4 +140,29 @@ body {
 
 .forgotpass:hover {
     text-decoration: underline;
+}
+
+
+.password-requirements{
+    display: none;
+    margin-bottom: 20px;
+}
+
+.requirement-circle {
+    color: #832B27;
+}
+
+.letterRequirement {
+    color: #0e4d37;
+}
+
+.requirement-circle.valid {
+    color: #4B8B35;
+}
+
+.error-message {
+    font-size: 0.9em;
+    color: red;
+    margin-top: 5px;
+    display: block;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register or Login</title>
     <link rel="stylesheet" href="~/css/style.css" />
+    <script src="~/js/site.js"></script>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet" />
 </head>
@@ -15,22 +16,45 @@
             <div class="names">
                 <div class="input-box" id="horizontal-names">
                     <input type="text" id="FirstName" name="FirstName" placeholder="First name" required autocomplete="given-name" />
+                    <span class="error-message" id="FirstNameError"></span>
                 </div>
                 <div class="input-box" id="horizontal-names">
                     <input type="text" id="LastName" name="LastName" placeholder="Last name" autocomplete="family-name" />
+                    <span class="error-message" id="LastNameError"></span>
                 </div>
             </div>
             <div class="input-box">
                 <input type="text" id="Username" name="Username" placeholder="Username" required autocomplete="username" />
                 <i class="bx bx-user"></i>
+                <span class="error-message" id="UsernameError"></span>
             </div>
             <div class="input-box">
                 <input type="text" id="Email" name="Email" placeholder="Email" required autocomplete="email" />
                 <i class="bx bx-envelope"></i>
+                <span class="error-message" id="EmailError"></span>
             </div>
             <div class="input-box">
                 <input type="password" id="Password" name="Password" placeholder="Password" required autocomplete="new-password" />
                 <i class="bx bx-lock"></i>
+                <span class="error-message" id="PasswordError"></span>
+            </div>
+            <div class="password-requirements" style="display: none;">
+                <div>
+                    <span id="lowercase-circle" class="requirement-circle">&#x25CF;</span>
+                    <span class="letterRequirement">At least one lowercase letter (a-z)</span>
+                </div>
+                <div>
+                    <span id="uppercase-circle" class="requirement-circle">&#x25CF;</span>
+                    <span class="letterRequirement">At least one uppercase letter (A-Z)</span>
+                </div>
+                <div>
+                    <span id="number-circle" class="requirement-circle">&#x25CF;</span>
+                    <span class="letterRequirement">At least one number (0-9)</span>
+                </div>
+                <div>
+                    <span id="special-char-circle" class="requirement-circle">&#x25CF;</span>
+                    <span class="letterRequirement">At least one special character (e.g., !#$%^&*)</span>
+                </div>
             </div>
             <div class="agree-terms">
                 <label>
