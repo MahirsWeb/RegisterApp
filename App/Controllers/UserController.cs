@@ -24,9 +24,21 @@ public class UserController : Controller
     {
         if (ModelState.IsValid)
         {
-            await _mongoDBService.Users.InsertOneAsync(personModel);
+            var mailExist = await _mongoDBService.Users.Find(u => u.Email == personModel.Email).FirstOrDefaultAsync();
+            if(mailExist != null)
+            {
+                ModelState.AddModelError("Email", "Email already exist.");
+                return View(personModel);
+            }
 
-           
+            var usernameExist = await _mongoDBService.Users.Find(u => u.Username == personModel.Username).FirstOrDefaultAsync();
+            if(usernameExist != null)
+            {
+                ModelState.AddModelError("Username", "Username already exist.");
+                return View(personModel);
+            }
+
+            await _mongoDBService.Users.InsertOneAsync(personModel);
             return RedirectToAction("Login", "Home");
         }
 

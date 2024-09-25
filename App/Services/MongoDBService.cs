@@ -22,4 +22,5 @@ namespace App.Services
 
         public IMongoCollection<PersonModel> Users => _database.GetCollection<PersonModel>(colName);
     }
+
 }
